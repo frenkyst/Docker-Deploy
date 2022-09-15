@@ -224,11 +224,17 @@
 
        docker tag housy-backend_backend menther/housy-backend    
 
+   ![image](https://user-images.githubusercontent.com/40049149/190416263-62f09d11-a325-4e13-bbde-69f861ca4ecb.png)
 
+4. Push Ke registry
 
+       docker push menther/housy-backend
 
+   ![image](https://user-images.githubusercontent.com/40049149/190416501-45ee4984-72ad-4746-81a7-5e92134c05ad.png)
 
+5. Cek pada dockerhub yg sudah kita hubungkan
 
+   ![image](https://user-images.githubusercontent.com/40049149/190418902-50d99c9f-d6ee-4e8b-be71-0062e9ee64fd.png)
 
 
 
