@@ -148,53 +148,31 @@
 
 17. Buat file bernama dockerfile
 
-        FROM node:10
-        WORKDIR /app
+        FROM node:10-alpine
+        WORKDIR /usr/app
         COPY . .
         RUN npm install
-        RUN npm install sequelize-cli
-        RUN wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
-        RUN chmod +x wait-for-it.sh
-        RUN echo '#!/bin/bash' > start-server.sh
-        RUN echo 'npx sequelize-cli db:migrate' >> start-server.sh
-        RUN echo 'npm start' >> start-server.sh
-        RUN chmod +x start-server.sh
+        RUN npm install sequelize-cli -g
+        RUN npx sequelize db:migrate
         EXPOSE 5000
         CMD ["npm", "start"]
 
-    ![image](https://user-images.githubusercontent.com/40049149/189877412-13f0efc7-2962-448b-96a5-7978460e3b12.png)
+    ![image](https://user-images.githubusercontent.com/40049149/190343602-f3ea2933-12d7-4d5b-ae67-93cdfc080219.png)
 
 18. Sekarang buat file docker-compose.yaml dengan isi berikut:
 
 
         version: '3.7'
         services:
-          backend:
-            build: .
-            depends_on:
-              - 'db'
-            ports:
-              - '5000:5000'
-            expose:
-              - '5000'
-            command: ./wait-for-it.sh db:3306 -s -t 0 -- ./start-server.sh
-          db:
-            image: 'mysql:latest'
-            restart: 'unless-stopped'
-            environment:
-              - 'MYSQL_DATABASE:housy'
-              - 'MYSQL_USER:menther'
-              - 'MYSQL_PASSWORD:Bootcamp13!@'
-              - 'MYSQL_ROOT_PASSWORD:Bootcamp13'
-            ports:
-              - '3306:3306'
-            expose:
-              - '3306'
-            volumes:
-              - 'database:/var/lib/mysql'
+         backend:
+           build: .
+           container_name: backend1
+           stdin_open: true
+           ports:
+            - '5000:5000'
 
 
-    ![image](https://user-images.githubusercontent.com/40049149/189880454-40242e97-010a-42db-8a06-9c73bb436da1.png)
+    ![image](https://user-images.githubusercontent.com/40049149/190344022-33410228-36af-4642-b787-abf909fb0cd6.png)
 
 19. Build dan Jalankan compose secara daemon dengan:
 
