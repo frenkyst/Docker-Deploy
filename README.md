@@ -208,6 +208,39 @@
 
     ![image](https://user-images.githubusercontent.com/40049149/190405745-ca6ec04e-8f4d-41bd-9062-bbcf49f84bb1.png)
 
+## Push Docker images ke Docker HUB
+
+1. Masuk Atau Register Ke docker hub https://hub.docker.com/
+
+   ![image](https://user-images.githubusercontent.com/40049149/190409646-0c6c5f82-7acd-4abb-b143-465b887c5014.png)
+
+2. Login di server app yg akan kita push
+
+       docker login
+
+   ![image](https://user-images.githubusercontent.com/40049149/190409977-c604b3df-b0f3-4b3a-b975-be8598bd2598.png)
+
+3. Rubah tag images untuk push ke akun kita
+
+       docker tag housy-backend_backend menther/housy-backend    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
