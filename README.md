@@ -204,6 +204,9 @@
 
     ![image](https://user-images.githubusercontent.com/40049149/189887940-52c598af-3787-4c8a-a1d6-80d0725a4557.png)
 
+22. Cek apakah aplikasi sudah jalan
+
+    ![image](https://user-images.githubusercontent.com/40049149/190405745-ca6ec04e-8f4d-41bd-9062-bbcf49f84bb1.png)
 
 
 
