@@ -131,7 +131,7 @@
 
     ![image](https://user-images.githubusercontent.com/40049149/190402843-6b2804fe-4fb7-4fa9-914d-b12b81c7af86.png)
 
-13. Buat file dockerfile di directory frontEnd
+15. Buat file dockerfile di directory frontEnd
 
         FROM node:10-alpine
         WORKDIR /usr/app
@@ -142,7 +142,7 @@
 
     ![image](https://user-images.githubusercontent.com/40049149/189845897-d3541a0a-00d4-4b99-9af0-280f3f49f42c.png)
 
-14. Buat file docker-compose.yaml untuk frontend dengan isi:
+16. Buat file docker-compose.yaml untuk frontend dengan isi:
 
         version: '3.7'
         services:
@@ -156,13 +156,13 @@
 
     ![image](https://user-images.githubusercontent.com/40049149/189848874-ed3b5a40-67c6-4057-ae00-e67789f8aa74.png)
 
-15. Build dan Jalankan compose secara daemon
+17. Build dan Jalankan compose secara daemon
 
         docker-compose up -d
         
     ![Screenshot from 2022-09-13 15-19-37](https://user-images.githubusercontent.com/40049149/189850145-bd946097-bcba-4180-bf08-d8da1a09bf6f.png)
 
-16. Ke directory BackEnd edit file config.json
+18. Ke directory BackEnd edit file config.json
 
         nano config/config.json
 
@@ -170,7 +170,7 @@
 
     ![Screenshot from 2022-09-13 17-16-18](https://user-images.githubusercontent.com/40049149/189876748-f43a4018-7927-46cc-b8e0-e6397c63a3a8.png)
 
-17. Buat file bernama dockerfile
+19. Buat file bernama dockerfile
 
         FROM node:10-alpine
         WORKDIR /usr/app
@@ -183,7 +183,7 @@
 
     ![image](https://user-images.githubusercontent.com/40049149/190343602-f3ea2933-12d7-4d5b-ae67-93cdfc080219.png)
 
-18. Sekarang buat file docker-compose.yaml dengan isi berikut:
+20. Sekarang buat file docker-compose.yaml dengan isi berikut:
 
 
         version: '3.7'
@@ -198,13 +198,12 @@
 
     ![image](https://user-images.githubusercontent.com/40049149/190344022-33410228-36af-4642-b787-abf909fb0cd6.png)
 
-19. Build dan Jalankan compose secara daemon dengan:
+21. Build dan Jalankan compose secara daemon dengan:
 
         docker-compose up -d
 
     ![image](https://user-images.githubusercontent.com/40049149/189887940-52c598af-3787-4c8a-a1d6-80d0725a4557.png)
 
-    ![image](https://user-images.githubusercontent.com/40049149/189888556-5a1e832f-efdf-42fe-a40b-91ffb06ad18d.png)
 
 
 
