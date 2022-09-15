@@ -107,6 +107,30 @@
 
     ![image](https://user-images.githubusercontent.com/40049149/189845376-b275329d-08d1-4bdd-8711-5c82f9514a67.png)
 
+13. Buat file mysql.yaml di home atau mana terserah
+
+        version: '3.7'
+        services:
+           mysql:
+             image: mysql:8
+             ports:
+              - 3306:3306
+             volumes:
+              - ~/apps/mysql:/var/lib/mysql
+             environment:
+              - MYSQL_ROOT_PASSWORD=Bootcamp13
+              - MYSQL_PASSWORD=Bootcamp13!@
+              - MYSQL_USER=menther
+              - MYSQL_DATABASE=housy
+
+    ![image](https://user-images.githubusercontent.com/40049149/190401655-938ac0b0-419b-4317-ab4a-e81b4835587f.png)
+
+14. Jalakan dengan perintah berikut
+
+        docker compose -f mysql.yaml up -d
+
+    ![image](https://user-images.githubusercontent.com/40049149/190402843-6b2804fe-4fb7-4fa9-914d-b12b81c7af86.png)
+
 13. Buat file dockerfile di directory frontEnd
 
         FROM node:10-alpine
